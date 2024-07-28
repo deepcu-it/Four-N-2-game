@@ -75,12 +75,13 @@ const App = () => {
             setMessage("You have choosen two index")
             return;
         }
-        const box = document.getElementById(`${i}+${j}`);
-        box.style.setProperty("background-color", "purple");
         if(isVisited[i][j]===1) {
             setMessage("This card is already visited");
             return;
         }
+        const box = document.getElementById(`${i}+${j}`);
+        box.style.setProperty("background-color", "purple");
+        
         isVisited[i][j] = 1;
         setIsvisited(isVisited);
         indexInput.push([i, j]);
@@ -97,23 +98,30 @@ const App = () => {
         }
         if (indexInput.length != 2) {
             setMessage("Please choose two index");
-            setIndexInput([]);
-            setInputCount(0);
             indexInput.forEach(([i, j]) => {
                 const box = document.getElementById(`${i}+${j}`);
                 box.style.removeProperty("background-color", "purple");
             })
+            indexInput.forEach(([i, j]) => {
+                isVisited[i][j] = 0;
+                setIsvisited(isVisited);
+            })
+            setIndexInput([]);
+            setInputCount(0);
             return;
         }
         if (index[0][0] === index[1][0] && index[0][1] === index[1][1]) {
             setMessage("you have choosen same index");
-            setIndexInput([]);
-            setIndex([]);
-            setInputCount(0);
             indexInput.forEach(([i, j]) => {
                 const box = document.getElementById(`${i}+${j}`);
                 box.style.removeProperty("background-color", "purple");
             })
+            indexInput.forEach(([i, j]) => {
+                isVisited[i][j] = 0;
+                setIsvisited(isVisited);
+            })
+            setIndexInput([]);
+            setInputCount(0);
             return;
         }
         if (nums[index[0][0]][index[0][1]] === nums[index[1][0]][index[1][1]]) {
