@@ -1,0 +1,95 @@
+#root{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+
+}
+.card-box{
+    background-color: rgb(21, 28, 106);
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+}
+.input {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+  }
+.Game-section {
+    margin: 25px;
+    padding: 10px;
+    border: 7px solid blue;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 20px 0px rgb(24, 64, 78), 1px -2px 15px 6px rgb(24, 64, 78);
+}
+.row{
+    display: flex;
+    gap: 20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    background-color: black;
+
+}
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width:150px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    align-content: center;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(136, 38, 138);
+  }
+  
+  .card-box:hover {
+      box-shadow: 0px 0px 8px 0px rgb(24, 64, 78), 0px 0px 10px 7px rgb(24, 64, 78);
+  }
+  
+@media (max-width:600px) {
+    .Game-section{
+        margin: 15px;
+        padding: 5px;
+        gap:7px;
+    }
+    .row{
+        gap:7px
+    }
+    .input {
+        width: 100px;
+        height: 20px;
+        font-size: 0.9em;
+      }
+    .btn{
+        padding: 4px;
+        margin: 4px;
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .card-box{
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+}
