@@ -1,5 +1,5 @@
 class CustomError extends Error {
-    CustomError(message) {
+    constructor(message) {
         super(message);
         Error.captureStackTrace(this,CustomError);
     }
