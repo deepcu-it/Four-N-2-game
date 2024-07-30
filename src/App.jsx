@@ -147,7 +147,7 @@ const App = () => {
             <div>
                 <input
                     className="input"
-                    placeholder="Enter your n value"
+                    placeholder="Enter your n"
                     onChange={(e) => setn(e.target.valueAsNumber)}
                     type="Number"
                 />
